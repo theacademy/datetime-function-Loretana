@@ -57,14 +57,18 @@ public class DateTimeFunctions {
 	public static String getTimeDifference(LocalDate date1, LocalDate date2) {
 		//YOUR CODE STARTS HERE
 		StringBuilder sb = new StringBuilder();
+
+		// Get the period between date1 and date2 inside Period obj
 		Period period =  Period.between(date1, date2);
 
+		// Append Years, months and days to StringBuilder object
 		sb.append("Years-");
 		sb.append(period.getYears());
 		sb.append(":Months-");
 		sb.append(period.getMonths());
 		sb.append(":Days-");
 		sb.append(period.getDays());
+
 		return sb.toString();
 		//YOUR CODE ENDS HERE
 
